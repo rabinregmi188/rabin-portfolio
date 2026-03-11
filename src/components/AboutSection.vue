@@ -46,28 +46,19 @@ onMounted(() => {
       <!-- Two-column layout -->
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
-        <!-- Left: Profile photo area -->
+        <!-- Left: Profile photo -->
         <div class="flex justify-center reveal">
           <div class="relative">
             <!-- Gradient ring border -->
-            <div class="w-64 h-64 sm:w-72 sm:h-72 rounded-full p-1 bg-gradient-to-br from-indigo-500 via-violet-500 to-cyan-500 shadow-2xl"
-                 style="animation: pulse-glow 3s ease-in-out infinite">
-              <!--
-                PROFILE PHOTO:
-                Replace the initials div below with this when you add your photo:
-                <img
-                  src="@/assets/profile.jpg"
-                  alt="Rabin Regmi profile photo"
-                  class="w-full h-full rounded-full object-cover"
-                />
-              -->
-              <div
-                class="w-full h-full rounded-full bg-gradient-to-br from-slate-700 to-slate-900 flex items-center justify-center"
-                role="img"
-                aria-label="Rabin Regmi profile photo placeholder"
-              >
-                <span class="text-6xl font-extrabold gradient-text select-none">RR</span>
-              </div>
+            <div
+              class="w-64 h-64 sm:w-72 sm:h-72 rounded-full p-1 bg-gradient-to-br from-indigo-500 via-violet-500 to-cyan-500 shadow-2xl"
+              style="animation: pulse-glow 3s ease-in-out infinite"
+            >
+              <img
+                src="@/assets/profile.jpg"
+                alt="Rabin Regmi"
+                class="w-full h-full object-cover rounded-full"
+              />
             </div>
 
             <!-- Floating badge - location -->
