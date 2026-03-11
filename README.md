@@ -10,7 +10,7 @@
 
 A production-ready personal portfolio website for **Rabin Regmi** — CS student, Full-Stack Developer & ML Enthusiast. Built with Vue.js 3, Tailwind CSS, and Vite.
 
-**[🔗 Live Demo](https://rabin-portfolio.vercel.app)** &nbsp;|&nbsp; **[📸 Screenshot](#screenshot)**
+**[🔗 Live Demo](rabin-portfolio-rust.vercel.app)** &nbsp;|&nbsp; **[📸 Screenshot](#screenshot)**
 
 </div>
 
