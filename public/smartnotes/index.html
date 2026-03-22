@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SmartNotes</title>
+    <meta
+      name="description"
+      content="SmartNotes is a focused note-taking workspace with search, tags, pinned notes, and local persistence."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Organize ideas without friction</p>
+          <h1>SmartNotes</h1>
+          <p class="hero-text">
+            A clean note-taking workspace for capturing ideas, organizing them with tags, pinning
+            important items, and finding anything fast with live search.
+          </p>
+          <div class="hero-actions">
+            <button id="new-note" class="btn btn-primary">New Note</button>
+            <button id="seed-demo" class="btn btn-secondary">Load Demo Notes</button>
+            <button id="export-json" class="btn btn-ghost">Export JSON</button>
+          </div>
+        </div>
+        <div class="hero-side">
+          <div class="hero-stat">
+            <span>Total notes</span>
+            <strong id="stat-total">0</strong>
+          </div>
+          <div class="hero-stat">
+            <span>Pinned notes</span>
+            <strong id="stat-pinned">0</strong>
+          </div>
+          <div class="hero-stat accent">
+            <span>Active tags</span>
+            <strong id="stat-tags">0</strong>
+          </div>
+        </div>
+      </header>
+
+      <main class="workspace">
+        <section class="sidebar panel">
+          <div class="sidebar-top">
+            <div>
+              <p class="panel-label">Note library</p>
+              <h2>Your workspace</h2>
+            </div>
+            <button id="clear-filter" class="text-btn">Clear filters</button>
+          </div>
+
+          <label class="search-wrap">
+            <span>Search</span>
+            <input id="search-input" type="text" placeholder="Search titles, content, or tags" />
+          </label>
+
+          <div class="tag-bar">
+            <div class="tag-bar-top">
+              <span>Filter by tag</span>
+            </div>
+            <div id="tag-filters" class="tag-filters"></div>
+          </div>
+
+          <div class="note-list-wrap">
+            <div class="list-header">
+              <span>Notes</span>
+              <span id="filtered-count">0 shown</span>
+            </div>
+            <div id="note-list" class="note-list"></div>
+          </div>
+        </section>
+
+        <section class="editor-column">
+          <section class="panel editor-panel">
+            <div class="editor-top">
+              <div>
+                <p class="panel-label">Editor</p>
+                <h2 id="editor-heading">Create a note</h2>
+              </div>
+              <div class="editor-actions">
+                <button id="toggle-pin" class="icon-btn" title="Pin note">📌</button>
+                <button id="duplicate-note" class="icon-btn" title="Duplicate note">⎘</button>
+                <button id="delete-note" class="icon-btn danger" title="Delete note">🗑</button>
+              </div>
+            </div>
+
+            <form id="editor-form" class="editor-form">
+              <label>
+                <span>Title</span>
+                <input id="note-title" type="text" maxlength="80" placeholder="Project ideas, meeting recap, study plan..." />
+              </label>
+              <label>
+                <span>Tags</span>
+                <input id="note-tags" type="text" placeholder="frontend, school, ideas" />
+              </label>
+              <label class="wide">
+                <span>Content</span>
+                <textarea id="note-content" rows="14" placeholder="Write your note here..."></textarea>
+              </label>
+              <div class="editor-footer">
+                <span id="save-state" class="muted-text">Changes save when you click Save Note.</span>
+                <button type="submit" class="btn btn-primary">Save Note</button>
+              </div>
+            </form>
+          </section>
+
+          <section class="panel preview-panel">
+            <div class="preview-top">
+              <div>
+                <p class="panel-label">Live preview</p>
+                <h2>Readable output</h2>
+              </div>
+              <span id="updated-at" class="muted-text">No note selected</span>
+            </div>
+            <div id="preview-tags" class="preview-tags"></div>
+            <article id="preview-body" class="preview-body">
+              <h3>Nothing selected yet</h3>
+              <p>Create or choose a note from the left to preview it here.</p>
+            </article>
+          </section>
+        </section>
+      </main>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+  </html>

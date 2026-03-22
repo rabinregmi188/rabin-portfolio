@@ -31,12 +31,12 @@ const projects = [
     emoji: '📝',
     name: 'SmartNotes',
     description:
-      'Full-stack note-taking app with tags, full-text search, and secure JWT authentication. Organize your thoughts with a clean, intuitive interface.',
-    tags: ['Node.js', 'Express', 'Vue.js', 'PostgreSQL'],
+      'Focused note-taking workspace with search, tags, pinned notes, export, and live preview. Built to keep writing organized without unnecessary friction.',
+    tags: ['JavaScript', 'CSS', 'LocalStorage', 'Productivity'],
     gradient: 'from-violet-500 to-pink-500',
-    githubUrl: null,
-    demoUrl: null,
-    comingSoon: true,
+    githubUrl: 'https://github.com/rabinregmi188/SmartNotes',
+    demoUrl: '/smartnotes/',
+    comingSoon: false,
   },
   {
     id: 4,
