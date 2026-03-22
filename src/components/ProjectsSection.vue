@@ -67,12 +67,12 @@ const projects = [
     emoji: '🖼️',
     name: 'Image Classifier',
     description:
-      'CNN-based image classification model trained with PyTorch and deployed as an interactive web demo. Upload any image and watch the AI identify it in real time.',
-    tags: ['Python', 'PyTorch', 'FastAPI', 'Streamlit'],
+      'Full-stack computer vision dashboard with image upload, torch-powered classification, stored prediction history, and a colorful analysis interface.',
+    tags: ['Python', 'FastAPI', 'PyTorch', 'SQLite', 'JavaScript'],
     gradient: 'from-rose-500 to-violet-600',
-    githubUrl: null,
+    githubUrl: 'https://github.com/rabinregmi188/Image-Classifier',
     demoUrl: null,
-    comingSoon: true,
+    comingSoon: false,
   },
 ]
 
