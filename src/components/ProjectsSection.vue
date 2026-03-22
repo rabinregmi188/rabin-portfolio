@@ -116,7 +116,7 @@ onMounted(() => {
         <article
           v-for="(project, index) in projects"
           :key="project.id"
-          class="reveal group bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-md border border-slate-100 dark:border-slate-700 card-hover"
+          class="reveal group flex h-full flex-col bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-md border border-slate-100 dark:border-slate-700 card-hover"
           :style="`animation-delay: ${index * 100}ms`"
           :aria-label="project.name"
         >
@@ -136,7 +136,7 @@ onMounted(() => {
           </div>
 
           <!-- Card body -->
-          <div class="p-6 flex flex-col h-full">
+          <div class="flex flex-1 flex-col p-6">
             <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2 group-hover:text-indigo-500 dark:group-hover:text-indigo-400 transition-colors">
               {{ project.name }}
             </h3>
