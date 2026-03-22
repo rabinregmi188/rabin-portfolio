@@ -55,12 +55,12 @@ const projects = [
     emoji: '💰',
     name: 'BudgetBuddy',
     description:
-      'Personal expense tracker with budgets, categories, and spending analytics. Visualize where your money goes and take control of your finances.',
-    tags: ['Node.js', 'Vue.js', 'PostgreSQL'],
+      'Responsive personal finance dashboard for tracking income and expenses, setting monthly category budgets, exporting transaction data, and analyzing spending patterns.',
+    tags: ['JavaScript', 'CSS', 'LocalStorage', 'Analytics'],
     gradient: 'from-amber-500 to-orange-500',
-    githubUrl: null,
-    demoUrl: null,
-    comingSoon: true,
+    githubUrl: 'https://github.com/rabinregmi188/Budgetbuddy',
+    demoUrl: '/budgetbuddy/',
+    comingSoon: false,
   },
   {
     id: 6,
