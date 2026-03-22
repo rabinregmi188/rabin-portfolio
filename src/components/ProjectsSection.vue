@@ -43,12 +43,12 @@ const projects = [
     emoji: '📚',
     name: 'StudyTracker',
     description:
-      'Track your study hours and visualize progress with beautiful interactive charts. Set goals, monitor streaks, and stay on top of your learning journey.',
-    tags: ['Vue.js', 'Chart.js', 'Firebase'],
+      'React and TypeScript study analytics dashboard with session logging, weekly goals, streak tracking, subject targets, and visual progress insights.',
+    tags: ['React', 'TypeScript', 'Vite', 'Analytics'],
     gradient: 'from-green-500 to-teal-500',
-    githubUrl: null,
-    demoUrl: null,
-    comingSoon: true,
+    githubUrl: 'https://github.com/rabinregmi188/StudyTracker',
+    demoUrl: '/studytracker/',
+    comingSoon: false,
   },
   {
     id: 5,
