@@ -32,7 +32,7 @@ const projects = [
     name: 'SmartNotes',
     description:
       'Focused note-taking workspace with search, tags, pinned notes, export, and live preview. Built to keep writing organized without unnecessary friction.',
-    tags: ['JavaScript', 'CSS', 'LocalStorage', 'Productivity'],
+    tags: ['HTML', 'CSS', 'JavaScript', 'LocalStorage', 'JSON Export'],
     gradient: 'from-violet-500 to-pink-500',
     githubUrl: 'https://github.com/rabinregmi188/SmartNotes',
     demoUrl: '/smartnotes/',
@@ -44,7 +44,7 @@ const projects = [
     name: 'StudyTracker',
     description:
       'React and TypeScript study analytics dashboard with session logging, weekly goals, streak tracking, subject targets, and visual progress insights.',
-    tags: ['React', 'TypeScript', 'Vite', 'Analytics'],
+    tags: ['React', 'TypeScript', 'Vite', 'CSS', 'LocalStorage'],
     gradient: 'from-green-500 to-teal-500',
     githubUrl: 'https://github.com/rabinregmi188/StudyTracker',
     demoUrl: '/studytracker/',
@@ -56,7 +56,7 @@ const projects = [
     name: 'BudgetBuddy',
     description:
       'Responsive personal finance dashboard for tracking income and expenses, setting monthly category budgets, exporting transaction data, and analyzing spending patterns.',
-    tags: ['JavaScript', 'CSS', 'LocalStorage', 'Analytics'],
+    tags: ['HTML', 'CSS', 'JavaScript', 'LocalStorage', 'CSV Export'],
     gradient: 'from-amber-500 to-orange-500',
     githubUrl: 'https://github.com/rabinregmi188/Budgetbuddy',
     demoUrl: '/budgetbuddy/',
@@ -144,12 +144,21 @@ onMounted(() => {
               {{ project.description }}
             </p>
 
+            <div class="mb-2 flex items-center justify-between gap-3">
+              <p class="text-[11px] font-semibold uppercase tracking-[0.24em] text-slate-400 dark:text-slate-500">
+                Tools Used
+              </p>
+              <p class="text-[11px] font-medium text-slate-500 dark:text-slate-400">
+                {{ project.tags.length }} technologies
+              </p>
+            </div>
+
             <!-- Tech tags -->
             <div class="flex flex-wrap gap-2 mb-5" aria-label="Technologies used">
               <span
                 v-for="tag in project.tags"
                 :key="tag"
-                class="skill-badge text-xs"
+                class="project-tool-badge"
               >
                 {{ tag }}
               </span>

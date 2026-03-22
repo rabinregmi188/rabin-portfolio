@@ -61,6 +61,11 @@
   .skill-badge {
     @apply px-3 py-1 text-sm font-mono bg-indigo-100 dark:bg-indigo-900/40 text-indigo-700 dark:text-indigo-300 rounded-full;
   }
+
+  /* Project stack badge */
+  .project-tool-badge {
+    @apply rounded-full border border-slate-200 bg-slate-100 px-3 py-1.5 text-xs font-semibold tracking-wide text-slate-700 shadow-sm dark:border-slate-600 dark:bg-slate-700/80 dark:text-slate-200;
+  }
 }
 
 /* Custom utility animations */
