@@ -12,6 +12,11 @@ A production-ready personal portfolio website for **Rabin Regmi** — CS student
 
 **[🔗 Live Demo](https://rabin-portfolio-rust.vercel.app)** &nbsp;|&nbsp; **[📸 Screenshot](#screenshot)**
 
+## Featured Project Links
+
+- BudgetBuddy live app: https://rabin-portfolio-rust.vercel.app/budgetbuddy/
+- BudgetBuddy repo: https://github.com/rabinregmi188/Budgetbuddy
+
 </div>
 
 ---

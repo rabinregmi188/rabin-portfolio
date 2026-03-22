@@ -174,8 +174,6 @@ onMounted(() => {
               <a
                 v-if="project.demoUrl"
                 :href="project.demoUrl"
-                target="_blank"
-                rel="noopener noreferrer"
                 class="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold bg-indigo-500 text-white hover:bg-indigo-600 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-indigo-500"
                 :aria-label="`View live demo of ${project.name}`"
               >
@@ -183,7 +181,7 @@ onMounted(() => {
                 <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                 </svg>
-                Live Demo
+                Open App
               </a>
             </div>
 
