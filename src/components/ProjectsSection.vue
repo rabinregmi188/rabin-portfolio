@@ -67,11 +67,11 @@ const projects = [
     emoji: '🖼️',
     name: 'Image Classifier',
     description:
-      'Full-stack computer vision dashboard with image upload, torch-powered classification, stored prediction history, and a colorful analysis interface.',
-    tags: ['Python', 'FastAPI', 'PyTorch', 'SQLite', 'JavaScript'],
+      'Interactive browser-based image classifier with colorful visual analysis, confidence scoring, and saved prediction history.',
+    tags: ['JavaScript', 'Canvas API', 'LocalStorage', 'Image Analysis', 'UI Design'],
     gradient: 'from-rose-500 to-violet-600',
     githubUrl: 'https://github.com/rabinregmi188/Image-Classifier',
-    demoUrl: null,
+    demoUrl: '/image-classifier/',
     comingSoon: false,
   },
 ]
