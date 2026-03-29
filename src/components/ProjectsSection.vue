@@ -4,7 +4,7 @@ import { onMounted } from 'vue'
 const projects = [
   {
     id: 1,
-    emoji: '\U0001F393',
+    emoji: '🎓',
     name: '5PANDAVA (Drona)',
     description:
       'AI-powered academic code grading platform with plagiarism detection, automated scoring via Gemini API, and AI-generated code detection. Built for educators who need scalable, intelligent assessment tools.',
@@ -16,7 +16,7 @@ const projects = [
   },
   {
     id: 2,
-    emoji: '\U0001F310',
+    emoji: '🌐',
     name: 'Portfolio Website',
     description:
       'This site! Personal portfolio with dark mode, smooth scroll animations, a typewriter effect, and a fully responsive layout. Built from scratch with Vue.js 3 and Tailwind CSS.',
@@ -28,7 +28,7 @@ const projects = [
   },
   {
     id: 3,
-    emoji: '\U0001F4DD',
+    emoji: '📝',
     name: 'SmartNotes',
     description:
       'Focused note-taking workspace with search, tags, pinned notes, export, and live preview. Built to keep writing organized without unnecessary friction.',
@@ -40,7 +40,7 @@ const projects = [
   },
   {
     id: 4,
-    emoji: '\U0001F4DA',
+    emoji: '📚',
     name: 'StudyTracker',
     description:
       'React and TypeScript study analytics dashboard with session logging, weekly goals, streak tracking, subject targets, and visual progress insights.',
@@ -52,7 +52,7 @@ const projects = [
   },
   {
     id: 5,
-    emoji: '\U0001F4B0',
+    emoji: '💰',
     name: 'BudgetBuddy',
     description:
       'Responsive personal finance dashboard for tracking income and expenses, setting monthly category budgets, exporting transaction data, and analyzing spending patterns.',
@@ -64,7 +64,7 @@ const projects = [
   },
   {
     id: 6,
-    emoji: '\U0001F5BC\uFE0F',
+    emoji: '🖼️',
     name: 'Image Classifier',
     description:
       'Interactive browser-based image classifier with colorful visual analysis, confidence scoring, and saved prediction history.',
@@ -76,7 +76,7 @@ const projects = [
   },
     {
     id: 7,
-    emoji: '\U0001F30D',
+    emoji: '🌍',
     name: 'AI Travel Planner',
     description:
       'Full-stack AI travel planning app with chat-based intent classification via DistilBERT and personalized itinerary generation via DistilGPT-2. Features a responsive React frontend and FastAPI backend powered by Hugging Face models.',
