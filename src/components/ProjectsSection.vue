@@ -74,6 +74,19 @@ const projects = [
     demoUrl: '/image-classifier/',
     comingSoon: false,
   },
+    {
+    id: 7,
+    emoji: '🌍',
+    name: 'AI Travel Planner',
+    description:
+      'Full-stack AI travel planning app with chat-based intent classification via DistilBERT and personalized itinerary generation via DistilGPT-2. Features a responsive React frontend and FastAPI backend powered by Hugging Face models.',
+    tags: ['React', 'TypeScript', 'Python', 'FastAPI', 'Hugging Face', 'TailwindCSS'],
+    gradient: 'from-emerald-500 to-cyan-500',
+    githubUrl: 'https://github.com/rabinregmi188/AI-Travel-Planner',
+    demoUrl: null,
+    comingSoon: false,
+  },
+
 ]
 
 onMounted(() => {
