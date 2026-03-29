@@ -14,8 +14,14 @@ A production-ready personal portfolio website for **Rabin Regmi** — CS student
 
 ## Featured Project Links
 
-- BudgetBuddy live app: https://rabin-portfolio-rust.vercel.app/budgetbuddy/
+- **AI Travel Planner** live app: https://ai-travel-planner-delta-seven.vercel.app/
+- AI Travel Planner repo: https://github.com/rabinregmi188/AI-Travel-Planner
+- **BudgetBuddy** live app: https://rabin-portfolio-rust.vercel.app/budgetbuddy/
 - BudgetBuddy repo: https://github.com/rabinregmi188/Budgetbuddy
+- **SmartNotes** live app: https://rabin-portfolio-rust.vercel.app/smartnotes/
+- SmartNotes repo: https://github.com/rabinregmi188/SmartNotes
+- **StudyTracker** live app: https://rabin-portfolio-rust.vercel.app/studytracker/
+- StudyTracker repo: https://github.com/rabinregmi188/StudyTracker
 
 </div>
 
@@ -54,7 +60,7 @@ rabin-portfolio/
 │   │   ├── HeroSection.vue     # Typewriter + animated gradient
 │   │   ├── AboutSection.vue    # Bio + quick stats
 │   │   ├── SkillsSection.vue   # Tabbed skills + progress bars
-│   │   ├── ProjectsSection.vue # 6 project cards
+│   │   ├── ProjectsSection.vue # 7 project cards
 │   │   ├── ContactSection.vue  # Form + social links
 │   │   └── FooterSection.vue   # Back-to-top footer
 │   ├── App.vue
