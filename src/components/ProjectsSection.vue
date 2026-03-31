@@ -86,18 +86,6 @@ const projects = [
     demoUrl: 'https://ai-travel-planner-delta-seven.vercel.app/',
     comingSoon: false,
   },
-  {
-    id: 8,
-    emoji: '😴',
-    name: 'SleepGoalz',
-    description:
-      'Full-stack sleep tracking app with real-time analytics dashboards and OAuth authentication, deployed on Netlify and scaling to 1,000+ concurrent users.',
-    tags: ['Nuxt.js', 'Supabase', 'PostgreSQL', 'Netlify'],
-    gradient: 'from-blue-500 to-indigo-600',
-    githubUrl: null,
-    demoUrl: null,
-    comingSoon: false,
-  },
 ]
 
 onMounted(() => {
