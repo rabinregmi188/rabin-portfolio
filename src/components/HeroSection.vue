@@ -116,12 +116,12 @@ onUnmounted(() => {
           View My Work 🚀
         </button>
         <a
-          href="#"
+          href="/resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
           class="btn-secondary bg-white/10 border-white/50 text-white hover:bg-white hover:text-indigo-600 text-base"
-          aria-label="Download resume (placeholder)"
-          aria-disabled="true"
+          aria-label="Download resume"
         >
-          <!-- TODO: Replace href="#" with a link to your resume PDF, e.g. href="/resume.pdf" -->
           Download Resume 📄
         </a>
       </div>

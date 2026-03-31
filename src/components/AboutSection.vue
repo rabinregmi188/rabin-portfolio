@@ -85,8 +85,8 @@ onMounted(() => {
                 to machine learning projects. I love learning new technologies and turning ideas into working products.
               </p>
               <p>
-                Currently exploring <span class="font-mono text-cyan-500">ML & AI</span> with PyTorch, building
-                full-stack apps with Vue.js & Node.js, and working as a Technical Assistant at ULM's Library Help Desk.
+                Currently exploring <span class="font-mono text-cyan-500">ML & AI</span> with PyTorch and building
+                full-stack apps with Vue.js & Node.js. Previously worked as a Technical Support Specialist at ULM.
               </p>
             </div>
           </div>
