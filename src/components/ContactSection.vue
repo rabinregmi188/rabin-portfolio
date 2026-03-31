@@ -12,10 +12,7 @@ async function handleSubmit() {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
       body: JSON.stringify({
-        // TODO: Replace with your actual key from https://web3forms.com (free, no backend required).
-        // Store in an environment variable (VITE_WEB3FORMS_KEY) before deploying:
-        //   access_key: import.meta.env.VITE_WEB3FORMS_KEY,
-        access_key: 'YOUR_ACCESS_KEY_HERE',
+        access_key: 'bf34ac7f-9cfa-477b-9c95-722f8d974e24',
         name: form.value.name,
         email: form.value.email,
         message: form.value.message,
