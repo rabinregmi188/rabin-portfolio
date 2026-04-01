@@ -86,6 +86,18 @@ const projects = [
     demoUrl: 'https://ai-travel-planner-delta-seven.vercel.app/',
     comingSoon: false,
   },
+  {
+    id: 8,
+    emoji: '😴',
+    name: 'OptiSleep',
+    description:
+      'Full-stack sleep tracking app with OAuth authentication, session logging, goal streaks, and real-time analytics dashboards.',
+    tags: ['Nuxt.js', 'Supabase', 'PostgreSQL', 'Tailwind CSS', 'Chart.js', 'Netlify'],
+    gradient: 'from-indigo-500 to-violet-600',
+    githubUrl: 'https://github.com/rabinregmi188/OptiSleep',
+    demoUrl: null,
+    comingSoon: false,
+  },
 ]
 
 onMounted(() => {
