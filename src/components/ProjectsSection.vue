@@ -15,18 +15,6 @@ const projects = [
     comingSoon: false,
   },
   {
-    id: 2,
-    emoji: '🌐',
-    name: 'Portfolio Website',
-    description:
-      'This site! Personal portfolio with dark mode, smooth scroll animations, a typewriter effect, and a fully responsive layout. Built from scratch with Vue.js 3 and Tailwind CSS.',
-    tags: ['Vue.js 3', 'Tailwind CSS', 'Vite', 'JavaScript'],
-    gradient: 'from-cyan-500 to-indigo-500',
-    githubUrl: 'https://github.com/rabinregmi188/rabin-portfolio',
-    demoUrl: null,
-    comingSoon: false,
-  },
-  {
     id: 3,
     emoji: '📝',
     name: 'SmartNotes',
