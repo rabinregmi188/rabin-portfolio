@@ -23,7 +23,7 @@ const projects = [
     tags: ['HTML', 'CSS', 'JavaScript', 'LocalStorage', 'JSON Export'],
     gradient: 'from-violet-500 to-pink-500',
     githubUrl: 'https://github.com/rabinregmi188/SmartNotes',
-    demoUrl: '/smartnotes/',
+    demoUrl: 'https://smartnotes-app-phi.vercel.app/',
     comingSoon: false,
   },
   {
@@ -35,7 +35,7 @@ const projects = [
     tags: ['React', 'TypeScript', 'Vite', 'CSS', 'LocalStorage'],
     gradient: 'from-green-500 to-teal-500',
     githubUrl: 'https://github.com/rabinregmi188/StudyTracker',
-    demoUrl: '/studytracker/',
+    demoUrl: 'https://studytracker-app-umber.vercel.app/',
     comingSoon: false,
   },
   {
@@ -47,7 +47,7 @@ const projects = [
     tags: ['HTML', 'CSS', 'JavaScript', 'LocalStorage', 'CSV Export'],
     gradient: 'from-amber-500 to-orange-500',
     githubUrl: 'https://github.com/rabinregmi188/Budgetbuddy',
-    demoUrl: '/budgetbuddy/',
+    demoUrl: 'https://budgetbuddy-app-psi.vercel.app/',
     comingSoon: false,
   },
   {
@@ -83,7 +83,7 @@ const projects = [
     tags: ['Nuxt.js', 'Supabase', 'PostgreSQL', 'Tailwind CSS', 'Chart.js', 'Netlify'],
     gradient: 'from-indigo-500 to-violet-600',
     githubUrl: 'https://github.com/rabinregmi188/OptiSleep',
-    demoUrl: null,
+    demoUrl: 'https://optisleep-app.vercel.app/',
     comingSoon: false,
   },
 ]
