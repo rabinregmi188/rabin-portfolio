@@ -83,7 +83,7 @@ const projects = [
     tags: ['Nuxt.js', 'Supabase', 'PostgreSQL', 'Tailwind CSS', 'Chart.js', 'Netlify'],
     gradient: 'from-indigo-500 to-violet-600',
     githubUrl: 'https://github.com/rabinregmi188/OptiSleep',
-    demoUrl: '/optisleep/',
+    demoUrl: 'https://optisleep-app.vercel.app/',
     comingSoon: false,
   },
 ]
