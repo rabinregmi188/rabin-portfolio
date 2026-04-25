@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BudgetBuddy — Personal Finance</title>
+  <title>OptiSleep — Sleep Smarter</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
   <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
@@ -13,33 +13,36 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg:       #05080f;
-      --surface:  #0c1220;
-      --surface2: #121a2e;
-      --surface3: #1a2440;
-      --border:   rgba(16,185,129,0.1);
-      --border2:  rgba(16,185,129,0.22);
-      --accent:   #10b981;
-      --accent-l: #34d399;
-      --accent-d: rgba(16,185,129,0.12);
-      --text:     #e8faf4;
-      --text2:    #7bada0;
-      --muted:    #3d5c54;
-      --green:    #34d399;
-      --amber:    #fbbf24;
-      --red:      #f87171;
-      --income-c: #34d399;
-      --expense-c:#f87171;
+      --bg: #07050e;
+      --surface: #100d1c;
+      --surface2: #17122a;
+      --surface3: #211840;
+      --border: rgba(167,139,250,0.1);
+      --border2: rgba(167,139,250,0.22);
+      --accent: #a78bfa;
+      --accent-light: #c4b5fd;
+      --accent-dim: rgba(167,139,250,0.12);
+      --accent-glow: rgba(167,139,250,0.28);
+      --text: #ede9fe;
+      --text2: #9b87c4;
+      --muted: #554a72;
+      --green: #6ee7b7;
+      --amber: #fbbf24;
+      --red: #f87171;
+      --orange: #fb923c;
     }
 
     html, body { height: 100%; overflow: hidden; }
+
     body {
       background: var(--bg);
       color: var(--text);
       font-family: 'DM Sans', system-ui, sans-serif;
       -webkit-font-smoothing: antialiased;
     }
+
     #root { height: 100vh; }
+
     h1,h2,h3,h4 { font-family: 'Syne', sans-serif; }
 
     ::-webkit-scrollbar { width: 4px; }
@@ -47,20 +50,23 @@
     ::-webkit-scrollbar-thumb { background: var(--surface3); border-radius: 4px; }
 
     @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(8px); }
+      from { opacity: 0; transform: translateY(10px); }
       to   { opacity: 1; transform: translateY(0); }
     }
-    @keyframes barGrow {
-      from { width: 0; }
+    @keyframes floatMoon {
+      0%,100% { transform: translateY(0px) rotate(-1deg); }
+      50%     { transform: translateY(-14px) rotate(1deg); }
     }
-    @keyframes toastIn {
-      from { opacity: 0; transform: translateY(8px) scale(.97); }
-      to   { opacity: 1; transform: translateY(0) scale(1); }
+    @keyframes pulseGlow {
+      0%,100% { box-shadow: 0 8px 32px rgba(139,92,246,0.35); }
+      50%     { box-shadow: 0 8px 48px rgba(139,92,246,0.6); }
     }
-    .fade-up { animation: fadeUp .3s ease forwards; }
-    input, select, textarea, button { font-family: inherit; }
-    input[type="month"], input[type="date"], input[type="number"] { color-scheme: dark; }
-    input:focus, select:focus, textarea:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+
+    .fade-up { animation: fadeUp 0.35s ease forwards; }
+
+    input, textarea, button { font-family: inherit; }
+    input:focus, textarea:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+    input[type="date"], input[type="time"] { color-scheme: dark; }
   </style>
 </head>
 <body>
