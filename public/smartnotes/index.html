@@ -1,192 +1,66 @@
-<!doctype html>
-<html lang="en" data-theme="light">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SmartNotes — Focused note-taking</title>
-    <meta
-      name="description"
-      content="SmartNotes is a focused note-taking workspace with markdown preview, dark mode, tags, pinning, search, and local persistence."
-    />
-    <meta name="theme-color" content="#0b1220" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
-    />
-    <link rel="stylesheet" href="./styles.css" />
-  </head>
-  <body>
-    <div class="app-shell">
-      <header class="hero">
-        <div class="hero-copy">
-          <p class="eyebrow">Organize ideas without friction</p>
-          <h1>SmartNotes</h1>
-          <p class="hero-text">
-            A clean note-taking workspace for capturing ideas, organizing them with tags, pinning
-            important items, and finding anything fast — with live search and a markdown preview.
-          </p>
-          <div class="hero-actions">
-            <button id="new-note" class="btn btn-primary">
-              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
-              New Note
-            </button>
-            <button id="seed-demo" class="btn btn-secondary">
-              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-              Load Demo Notes
-            </button>
-            <button id="export-json" class="btn btn-ghost">
-              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h7v7"/><path d="M10 14 21 3"/><path d="M21 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5"/></svg>
-              Export JSON
-            </button>
-            <button id="theme-toggle" class="btn btn-ghost icon-only" title="Toggle theme" aria-label="Toggle theme">
-              <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
-              <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-            </button>
-            <button id="show-shortcuts" class="btn btn-ghost icon-only" title="Keyboard shortcuts (⌘/)" aria-label="Keyboard shortcuts">
-              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 10h.01M10 10h.01M14 10h.01M18 10h.01M6 14h.01M18 14h.01M10 14h4"/></svg>
-            </button>
-          </div>
-        </div>
-        <div class="hero-side">
-          <div class="hero-stat">
-            <span>Total notes</span>
-            <strong id="stat-total">0</strong>
-          </div>
-          <div class="hero-stat">
-            <span>Pinned notes</span>
-            <strong id="stat-pinned">0</strong>
-          </div>
-          <div class="hero-stat accent">
-            <span>Active tags</span>
-            <strong id="stat-tags">0</strong>
-          </div>
-        </div>
-      </header>
-
-      <main class="workspace">
-        <section class="sidebar panel">
-          <div class="sidebar-top">
-            <div>
-              <p class="panel-label">Note library</p>
-              <h2>Your workspace</h2>
-            </div>
-            <button id="clear-filter" class="text-btn">Clear filters</button>
-          </div>
-
-          <label class="search-wrap">
-            <span>Search <kbd>⌘K</kbd></span>
-            <div class="search-input-wrap">
-              <svg class="search-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-              <input id="search-input" type="text" placeholder="Search titles, content, or tags" />
-            </div>
-          </label>
-
-          <div class="tag-bar">
-            <div class="tag-bar-top">
-              <span>Filter by tag</span>
-            </div>
-            <div id="tag-filters" class="tag-filters"></div>
-          </div>
-
-          <div class="note-list-wrap">
-            <div class="list-header">
-              <span>Notes</span>
-              <span id="filtered-count">0 shown</span>
-            </div>
-            <div id="note-list" class="note-list"></div>
-          </div>
-        </section>
-
-        <section class="editor-column">
-          <section class="panel editor-panel">
-            <div class="editor-top">
-              <div>
-                <p class="panel-label">Editor</p>
-                <h2 id="editor-heading">Create a note</h2>
-              </div>
-              <div class="editor-actions">
-                <button id="toggle-pin" class="icon-btn" title="Pin note" aria-label="Pin note">
-                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 17v5"/><path d="M9 10.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24V17h14v-1.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V7a1 1 0 0 1 1-1 2 2 0 0 0 0-4H8a2 2 0 0 0 0 4 1 1 0 0 1 1 1z"/></svg>
-                </button>
-                <button id="duplicate-note" class="icon-btn" title="Duplicate note" aria-label="Duplicate note">
-                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-                </button>
-                <button id="delete-note" class="icon-btn danger" title="Delete note" aria-label="Delete note">
-                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/><path d="M10 11v6M14 11v6"/><path d="M9 6V4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/></svg>
-                </button>
-              </div>
-            </div>
-
-            <form id="editor-form" class="editor-form">
-              <label>
-                <span>Title</span>
-                <input id="note-title" type="text" maxlength="80" placeholder="Project ideas, meeting recap, study plan..." />
-              </label>
-              <label>
-                <span>Tags <em class="hint">comma-separated</em></span>
-                <input id="note-tags" type="text" placeholder="frontend, school, ideas" />
-              </label>
-              <label class="wide">
-                <span>Content <em class="hint">markdown supported — #, **bold**, *italic*, `code`, - list, &gt; quote</em></span>
-                <textarea id="note-content" rows="14" placeholder="Write your note here... Markdown is supported."></textarea>
-              </label>
-              <div class="editor-footer">
-                <div class="footer-meta">
-                  <span id="save-state" class="muted-text" data-state="saved">
-                    <span class="save-dot" aria-hidden="true"></span>
-                    <span id="save-label">All changes saved</span>
-                  </span>
-                  <span class="footer-divider" aria-hidden="true"></span>
-                  <span id="word-count" class="muted-text">0 words · 0 min read</span>
-                </div>
-                <button type="submit" class="btn btn-primary">
-                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
-                  Save Note
-                </button>
-              </div>
-            </form>
-          </section>
-
-          <section class="panel preview-panel">
-            <div class="preview-top">
-              <div>
-                <p class="panel-label">Live preview</p>
-                <h2>Readable output</h2>
-              </div>
-              <span id="updated-at" class="muted-text">No note selected</span>
-            </div>
-            <div id="preview-tags" class="preview-tags"></div>
-            <article id="preview-body" class="preview-body">
-              <h1>Nothing selected yet</h1>
-              <p>Create or choose a note from the left to preview it here.</p>
-            </article>
-          </section>
-        </section>
-      </main>
-    </div>
-
-    <div id="toast-container" class="toast-container" aria-live="polite" aria-atomic="true"></div>
-
-    <div id="shortcuts-dialog" class="dialog-backdrop" aria-hidden="true">
-      <div class="dialog" role="dialog" aria-modal="true" aria-labelledby="shortcuts-title">
-        <div class="dialog-head">
-          <h2 id="shortcuts-title">Keyboard shortcuts</h2>
-          <button id="close-shortcuts" class="icon-btn" aria-label="Close">
-            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
-          </button>
-        </div>
-        <ul class="shortcut-list">
-          <li><span>New note</span><span class="keys"><kbd>⌘</kbd><kbd>N</kbd></span></li>
-          <li><span>Save note</span><span class="keys"><kbd>⌘</kbd><kbd>S</kbd></span></li>
-          <li><span>Focus search</span><span class="keys"><kbd>⌘</kbd><kbd>K</kbd></span></li>
-          <li><span>Toggle this panel</span><span class="keys"><kbd>⌘</kbd><kbd>/</kbd></span></li>
-          <li><span>Close dialog</span><span class="keys"><kbd>Esc</kbd></span></li>
-        </ul>
-      </div>
-    </div>
-
-    <script src="./app.js"></script>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartNotes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg:       #f2ede3;
+      --surface:  #faf8f2;
+      --surface2: #f5f0e6;
+      --border:   rgba(90,65,40,0.12);
+      --border2:  rgba(90,65,40,0.22);
+      --accent:   #b85c2a;
+      --accent-l: #d4783e;
+      --accent-d: rgba(184,92,42,0.1);
+      --text:     #1c1309;
+      --text2:    #6b5744;
+      --muted:    #9e8b79;
+      --green:    #2d7a4f;
+      --red:      #c0392b;
+    }
+    html, body { height: 100%; overflow: hidden; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', system-ui, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    #root { height: 100vh; display: flex; flex-direction: column; }
+    h1,h2,h3 { font-family: 'Lora', Georgia, serif; }
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 4px; }
+    @keyframes fadeIn { from{opacity:0;transform:translateY(4px)} to{opacity:1;transform:none} }
+    @keyframes slideIn { from{opacity:0;transform:translateX(-6px)} to{opacity:1;transform:none} }
+    .fade-in { animation: fadeIn .25s ease forwards; }
+    textarea, input, select, button { font-family: inherit; }
+    textarea:focus, input:focus, select:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+    .preview-body h1 { font-family:'Lora',Georgia,serif; font-size:1.6em; margin:0 0 .6em; line-height:1.2; color:var(--text); }
+    .preview-body h2 { font-family:'Lora',Georgia,serif; font-size:1.2em; margin:.8em 0 .4em; color:var(--text); }
+    .preview-body h3 { font-family:'Lora',Georgia,serif; font-size:1em; margin:.6em 0 .3em; color:var(--text); }
+    .preview-body p  { margin:0 0 .8em; line-height:1.75; color:var(--text); }
+    .preview-body ul,.preview-body ol { margin:0 0 .8em; padding-left:1.4em; }
+    .preview-body li { margin-bottom:.3em; line-height:1.65; }
+    .preview-body strong { font-weight:700; color:var(--text); }
+    .preview-body em { font-style:italic; }
+    .preview-body code { font-family:'JetBrains Mono',monospace; font-size:.85em; background:rgba(90,65,40,0.08); padding:2px 6px; border-radius:4px; }
+    .preview-body pre { background:rgba(90,65,40,0.07); border:1px solid var(--border); border-radius:10px; padding:14px 16px; margin:0 0 .8em; overflow-x:auto; }
+    .preview-body pre code { background:none; padding:0; }
+    .preview-body blockquote { border-left:3px solid var(--accent); margin:0 0 .8em; padding:.5em 1em; background:var(--accent-d); border-radius:0 8px 8px 0; font-style:italic; color:var(--text2); }
+    .preview-body hr { border:0; border-top:1px solid var(--border2); margin:1em 0; }
+    .preview-body a { color:var(--accent); text-decoration:underline; text-underline-offset:2px; }
+  </style>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel" src="./app.jsx"></script>
+</body>
 </html>
