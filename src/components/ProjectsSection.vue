@@ -10,9 +10,9 @@ const projects = [
       'AI-powered academic code grading platform with plagiarism detection, automated scoring via Gemini API, and AI-generated code detection. Built for educators who need scalable, intelligent assessment tools.',
     tags: ['Next.js', 'FastAPI', 'Python', 'PostgreSQL', 'Redis', 'Docker'],
     gradient: 'from-indigo-500 to-violet-600',
-    githubUrl: 'https://github.com/dineshchhantyal/5PANDAVA',
+    githubUrl: null,
     demoUrl: null,
-    comingSoon: false,
+    comingSoon: true,
   },
   {
     id: 3,
@@ -79,8 +79,8 @@ const projects = [
     emoji: '😴',
     name: 'OptiSleep',
     description:
-      'Full-stack sleep tracking app with OAuth authentication, session logging, goal streaks, and real-time analytics dashboards.',
-    tags: ['Nuxt.js', 'Supabase', 'PostgreSQL', 'Tailwind CSS', 'Chart.js', 'Netlify'],
+      'Interactive sleep tracking dashboard prototype with animated landing, session logging, goals, history views, and custom chart components.',
+    tags: ['React', 'JavaScript', 'SVG Charts', 'Custom UI', 'Vercel'],
     gradient: 'from-indigo-500 to-violet-600',
     githubUrl: 'https://github.com/rabinregmi188/OptiSleep',
     demoUrl: 'https://optisleep-app.vercel.app/',
